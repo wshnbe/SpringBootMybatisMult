@@ -8,7 +8,6 @@ import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.basjoo.SpringBootMybatisMult.datasource.anno.DS;
-import com.basjoo.SpringBootMybatisMult.error.AllException;
 
 @Service
 public class UserService {
@@ -37,7 +36,7 @@ public class UserService {
 	public void addUser(){
 		userMapper.insertByParam(80, "80");
 		userMapper.insertByParam(90, "90");
-		int a = 10/0;
+		//int a = 10/0; 放开注释 测试系统事务 
 		userMapper.insertByParam(100, "100");
 	}
 }
